@@ -67,7 +67,7 @@ try {
   addToDOM();
   render();
 } catch(e) {
-    var errorReport = "Your program encountered an unrecoverable error, can not draw on canvas. Error was:<br/><br/>";
+    var errorReport = "Program encountered an error";
     $('#root').append(errorReport+e);
 }
 
