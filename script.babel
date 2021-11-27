@@ -1,11 +1,3 @@
-////////////////////////////////////////////////////////////////////////////////
-// Draw a Square Exercise                                                     //
-// Your task is to complete the function square (at line 28).                 //
-// The function takes 4 arguments - coordinates x1, y1, x2, y2                //
-// for the square and returns a geometry object (THREE.Geometry())            //
-// that defines a square at the provided coordinates.                         //
-////////////////////////////////////////////////////////////////////////////////
-/*global THREE Coordinates $ document window*/
 
 var camera, scene, renderer;
 var windowScale;
@@ -25,14 +17,14 @@ function drawSquare(x1, y1, x2, y2) {
 }
 
 function init() {
-	//  Set up some parameters
+	
 	var canvasWidth = 824;
 	var canvasHeight = 494;
 	var canvasRatio = canvasWidth / canvasHeight;
-	// scene
+	
 	scene = new THREE.Scene();
 
-	// Camera: Y up, X right, Z up
+	
 	windowScale = 12;
 	var windowWidth = windowScale * canvasRatio;
 	var windowHeight = windowScale;
@@ -59,7 +51,7 @@ function render() {
 	renderer.render( scene, camera );
 }
 function showGrids() {
-	// Background grid and axes. Grid step size is 1, axes cross at 0, 0
+	
 	Coordinates.drawGrid({size:100,scale:1,orientation:"z"});
 	Coordinates.drawAxes({axisLength:11,axisOrientation:"x",axisRadius:0.04});
 	Coordinates.drawAxes({axisLength:11,axisOrientation:"y",axisRadius:0.04});
